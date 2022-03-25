@@ -7,6 +7,16 @@ import Shop from './components/Shop/Shop';
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    // checking duplicate product in cart
+    const item = cart.filter(e => e.id === product.id);
+    if (item.length === 0) {
+      const newCart = [...cart, product];
+      setCart(newCart);
+    }
+  }
 
   useEffect(() => {
     fetch('vegetablesData.json')
@@ -15,11 +25,10 @@ function App() {
   }, []);
 
 
-
   return (
-    <div className='container'>
-      <Header></Header>
-      <Shop products={products}></Shop>
+    <div className='container-fluid '>
+      <Header items={cart.length}></Header>
+      <Shop addToCart={addToCart} cart={cart} products={products}></Shop>
     </div>
   );
 }
