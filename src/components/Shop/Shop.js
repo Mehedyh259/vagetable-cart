@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import './Shop.css'
 
-const Shop = ({ products, addToCart, cart, emptyWholeCart, chooseRandomItem }) => {
+const Shop = ({ products, addToCart, cart, emptyWholeCart, chooseRandomItem, removeSingleItem }) => {
 
     return (
         <div className="container my-3">
@@ -23,6 +23,8 @@ const Shop = ({ products, addToCart, cart, emptyWholeCart, chooseRandomItem }) =
                         cart={cart}
                         emptyWholeCart={emptyWholeCart}
                         chooseRandomItem={chooseRandomItem}
+                        removeSingleItem={removeSingleItem}
+
                     />
                 </div>
             </div>

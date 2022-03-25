@@ -1,7 +1,7 @@
 import React from 'react';
 import CartSingleItem from '../CartSingleItem/CartSingleItem';
 
-const Cart = ({ cart, emptyWholeCart, chooseRandomItem }) => {
+const Cart = ({ cart, emptyWholeCart, chooseRandomItem, removeSingleItem }) => {
 
     return (
         <div className="sticky-top">
@@ -12,6 +12,7 @@ const Cart = ({ cart, emptyWholeCart, chooseRandomItem }) => {
                 cart.map((item) => <CartSingleItem
                     key={item.id}
                     item={item}
+                    removeSingleItem={removeSingleItem}
                 ></CartSingleItem>)
             }
 

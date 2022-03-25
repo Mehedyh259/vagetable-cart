@@ -27,6 +27,12 @@ function App() {
     setCart([]);
   }
 
+  const removeSingleItem = (id) => {
+    const remainItems = cart.filter(e => e.id !== id);
+    console.log(remainItems);
+    setCart(remainItems);
+  }
+
   const chooseRandomItem = () => {
     const randomCart = [];
     const randomItem = cart[(Math.random() * cart.length) | 0];
@@ -48,6 +54,7 @@ function App() {
         addToCart={addToCart}
         emptyWholeCart={emptyWholeCart}
         chooseRandomItem={chooseRandomItem}
+        removeSingleItem={removeSingleItem}
         cart={cart}
         products={products}
       ></Shop>
