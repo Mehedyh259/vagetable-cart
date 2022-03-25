@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar navbar-light bg-light px-3">
                 <span className="navbar-brand fw-bold">Vagetable Bazar</span>
                 <button className="btn btn-sm btn-primary ">
                     Cart <span className="badge bg-danger">4</span>
