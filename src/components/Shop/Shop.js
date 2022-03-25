@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import './Shop.css'
 
-const Shop = ({ products, addToCart, cart }) => {
+const Shop = ({ products, addToCart, cart, emptyWholeCart, chooseRandomItem }) => {
 
     return (
         <div className="container my-3">
@@ -19,7 +19,11 @@ const Shop = ({ products, addToCart, cart }) => {
 
                 {/* Cart area */}
                 <div className='col-12 col-sm-11 col-lg-3 col-md-5 mx-auto p-2 shadow'>
-                    <Cart cart={cart} />
+                    <Cart
+                        cart={cart}
+                        emptyWholeCart={emptyWholeCart}
+                        chooseRandomItem={chooseRandomItem}
+                    />
                 </div>
             </div>
         </div>

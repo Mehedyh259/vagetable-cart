@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
+import './SingleProduct.css'
 
 const SingleProduct = ({ product, addToCart }) => {
 

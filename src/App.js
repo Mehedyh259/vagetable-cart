@@ -10,12 +10,28 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    // checking duplicate product in cart
-    const item = cart.filter(e => e.id === product.id);
-    if (item.length === 0) {
-      const newCart = [...cart, product];
-      setCart(newCart);
+    // checking if cart has maximum 4 products
+    if (cart.length === 4) {
+      alert("You have selected maximum 4 products");
+    } else {
+      // checking duplicate product in cart
+      const item = cart.filter(e => e.id === product.id);
+      if (item.length === 0) {
+        const newCart = [...cart, product];
+        setCart(newCart);
+      }
     }
+  }
+
+  const emptyWholeCart = () => {
+    setCart([]);
+  }
+
+  const chooseRandomItem = () => {
+    const randomCart = [];
+    const randomItem = cart[(Math.random() * cart.length) | 0];
+    randomCart.push(randomItem);
+    setCart(randomCart);
   }
 
   useEffect(() => {
@@ -28,7 +44,13 @@ function App() {
   return (
     <div className='container-fluid '>
       <Header items={cart.length}></Header>
-      <Shop addToCart={addToCart} cart={cart} products={products}></Shop>
+      <Shop
+        addToCart={addToCart}
+        emptyWholeCart={emptyWholeCart}
+        chooseRandomItem={chooseRandomItem}
+        cart={cart}
+        products={products}
+      ></Shop>
     </div>
   );
 }
