@@ -14,7 +14,7 @@ const Questions = () => {
                 <div className="col-md-6 col-sm-11 col-12 p-3">
                     <h2>How useState Works ?</h2>
                     <p>
-                        useState is a hook. useState allows us to declare state variable with a default value. useState allows us functional component to have state variable. React always keep track of this state variable to keep it up to date and render it everytime.useState can only be use in funtional component
+                        useState is a hook. useState allows us to declare state variable with a default value. useState allows us functional component to have state variable. React always keep track of this state variable to keep it up to date and render it everytime. useState can only be use in funtional component.
 
                     </p>
                 </div>
