@@ -15,7 +15,7 @@
     "id": 3,
     "name": "Tomato",
     "img": "https://i.pinimg.com/originals/65/fd/6a/65fd6a509fdc68cfbcb0184dbdce387d.jpg",
-    "price": 85
+    "price": 35
   },
   {
     "id": 4,
@@ -32,7 +32,25 @@
   {
     "id": 6,
     "name": "Broccoli",
-    "img": "https://t4.ftcdn.net/jpg/02/66/68/37/360_F_266683754_wzx9XxeNXKudct2Q3qwQf1PvVaQaKOf6.jpg",
-    "price": 65
+    "img": "https://www.fruitnvegiesrus.com.au/wp-content/uploads/2018/08/broccoli.jpg",
+    "price": 85
+  },
+  {
+    "id": 7,
+    "name": "Cabbage",
+    "img": "https://www.kindpng.com/picc/m/158-1587732_fruits-vegetable-single-png-download-transparent-background-single.png",
+    "price": 70
+  },
+  {
+    "id": 8,
+    "name": "Radish",
+    "img": "https://gro-zi.com/wp-content/uploads/2021/08/white-radish-png.png",
+    "price": 25
+  },
+  {
+    "id": 9,
+    "name": "Carrot",
+    "img": "https://thumbs.dreamstime.com/b/carrot-two-vegetables-white-background-166376870.jpg",
+    "price": 50
   }
 ]

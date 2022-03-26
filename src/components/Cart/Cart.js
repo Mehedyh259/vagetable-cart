@@ -4,9 +4,8 @@ import CartSingleItem from '../CartSingleItem/CartSingleItem';
 const Cart = ({ cart, emptyWholeCart, chooseRandomItem, removeSingleItem }) => {
 
     return (
-        <div className="sticky-top">
-            <p className="py-4 fw-bold">Cart Products List ({cart.length}) </p>
-
+        <div className="sticky-top py-4">
+            <p className="mb-3 fw-bold">Cart Products List ({cart.length}) </p>
 
             {
                 cart.map((item) => <CartSingleItem
@@ -17,8 +16,8 @@ const Cart = ({ cart, emptyWholeCart, chooseRandomItem, removeSingleItem }) => {
             }
 
             <div className="text-center">
-                <button onClick={chooseRandomItem} className="btn btn-success w-75 my-2">Choose 1 for me</button>
-                <button onClick={emptyWholeCart} className="btn btn-danger w-75">Choose again</button>
+                <button onClick={chooseRandomItem} className="btn btn-outline-success w-75 my-2">CHOOSE 1 FOR ME</button>
+                <button onClick={emptyWholeCart} className="btn btn-outline-danger w-75">CHOOSE AGAIN</button>
             </div>
         </div>
     );

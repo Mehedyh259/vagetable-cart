@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
+import Questions from './components/Questions/Questions';
 import Shop from './components/Shop/Shop';
 
 function App() {
@@ -29,15 +30,16 @@ function App() {
 
   const removeSingleItem = (id) => {
     const remainItems = cart.filter(e => e.id !== id);
-    console.log(remainItems);
     setCart(remainItems);
   }
 
   const chooseRandomItem = () => {
-    const randomCart = [];
-    const randomItem = cart[(Math.random() * cart.length) | 0];
-    randomCart.push(randomItem);
-    setCart(randomCart);
+    if (cart.length !== 0) {
+      const randomCart = [];
+      const randomItem = cart[(Math.random() * cart.length) | 0];
+      randomCart.push(randomItem);
+      setCart(randomCart);
+    }
   }
 
   useEffect(() => {
@@ -58,6 +60,8 @@ function App() {
         cart={cart}
         products={products}
       ></Shop>
+
+      <Questions></Questions>
     </div>
   );
 }
