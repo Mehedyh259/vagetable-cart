@@ -50,19 +50,22 @@ function App() {
 
 
   return (
-    <div className='container-fluid '>
+    <div>
       <Header items={cart.length}></Header>
-      <Shop
-        addToCart={addToCart}
-        emptyWholeCart={emptyWholeCart}
-        chooseRandomItem={chooseRandomItem}
-        removeSingleItem={removeSingleItem}
-        cart={cart}
-        products={products}
-      ></Shop>
+      <div className='container-fluid '>
+        <Shop
+          addToCart={addToCart}
+          emptyWholeCart={emptyWholeCart}
+          chooseRandomItem={chooseRandomItem}
+          removeSingleItem={removeSingleItem}
+          cart={cart}
+          products={products}
+        ></Shop>
 
-      <Questions></Questions>
+        <Questions></Questions>
+      </div>
     </div>
+
   );
 }
 
